@@ -1,13 +1,18 @@
+// NEXTJS
+import Link from "next/link";
+// COMPONENTS
 import Head from "next/head";
-import Footer from "../components/Footer";
-import NavBar from "../components/Navbar";
+
+// STYLES
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
-      <Footer />
+      <h1>This is the home page</h1>
+      <Link href="/artists">
+        <a>See Artists Listing</a>
+      </Link>
     </div>
   );
 }
