@@ -8,8 +8,8 @@ const Navbar = () => {
         <Image
           src="/dreamville_logo.png"
           alt="site logo"
-          width={128}
-          height={77}
+          width={217}
+          height={71}
         />
       </div>
       <Link href="/">
