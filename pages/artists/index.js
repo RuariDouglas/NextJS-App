@@ -11,8 +11,6 @@ export const getStaticProps = async () => {
 };
 
 const Artists = ({ artists }) => {
-  // console.log(ninjas)
-
   return (
     <div>
       <h1>All Ninjas</h1>
@@ -27,4 +25,4 @@ const Artists = ({ artists }) => {
   );
 };
 
-export default Ninjas;
+export default Artists;

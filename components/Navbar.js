@@ -18,8 +18,8 @@ const Navbar = () => {
       <Link href="/about">
         <a>About</a>
       </Link>
-      <Link href="/ninjas/">
-        <a>Ninja Listing</a>
+      <Link href="/artists/">
+        <a>Artist Listing</a>
       </Link>
     </nav>
   );
