@@ -1,16 +1,30 @@
-import Head from "next/head";
+import styles from "../../styles/Artists.module.css";
+import Link from "next/link";
 
-const Artists = () => {
+export const getStaticProps = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+
+  return {
+    props: { artists: data },
+  };
+};
+
+const Artists = ({ artists }) => {
+  // console.log(ninjas)
+
   return (
-    <>
-      <Head>
-        <title>Artists List | Artists</title>
-        <meta name="keywords" content="About Page" />
-      </Head>
-      <div>
-        <h1>All Artists</h1>
-      </div>
-    </>
+    <div>
+      <h1>All Ninjas</h1>
+      {artists.map((artist) => (
+        <Link href={"/artists/" + artist.id} key={artist.id}>
+          <a className={styles.single}>
+            <h3>{artist.name}</h3>
+          </a>
+        </Link>
+      ))}
+    </div>
   );
 };
-export default Artists;
+
+export default Ninjas;
